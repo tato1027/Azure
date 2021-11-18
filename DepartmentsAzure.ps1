@@ -1,4 +1,9 @@
-$ou = "" #Distinguished name of CN with users
+# Author: Anton Petrianik
+# Copying a data from Department attribute to extensionAttribute11, and cut to 65 letters if lengh is more than 65.
+
+
+
+$ou = "" # Distinguished name of CN with users
 $users = Get-ADUser -Filter * -SearchBase $ou -Properties Department, extensionAttribute11 | Select-Object SamAccountName, Department, extensionAttribute11
 
 function Copy-DepartmentAttribute {
