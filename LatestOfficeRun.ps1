@@ -1,6 +1,6 @@
 ﻿$date = Get-Date -Format g
 $path = "$env:windir\Prefetch"
-$outPath = "\\file-server\OfficeStatistics$\Office.csv"
+$outPath = "\\192.168.1.1\Share$\$dateFileName.csv"
 
 #Имя рабочей станции
 $compName = gwmi Win32_ComputerSystem| %{$_.DNSHostName + '.' + $_.Domain}
